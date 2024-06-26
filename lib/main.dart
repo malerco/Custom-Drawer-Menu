@@ -89,7 +89,135 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
       backgroundColor: Color.fromRGBO(238, 238, 238, 0.9),
       body: Stack(
         children: [
+          Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 18.0),
+                child: Icon(Icons.close),
+              ),
 
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 18.0),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Colors.green),
+                        shape: BoxShape.circle
+                      ),
+                      clipBehavior: Clip.hardEdge,
+                      child: CircleAvatar(
+                        backgroundImage: AssetImage('assets/dummy.png'),
+                        radius: 50,
+                      ),
+                    ),
+                  ),
+
+                  Padding(
+                    padding: const EdgeInsets.only(left: 18.0, top: 10),
+                    child: Text('John Smith', style: TextStyle(fontSize: 28),),
+                  ),
+
+                  Padding(
+                    padding: const EdgeInsets.only(left: 18.0, top: 3),
+                    child: Text('johnsmith@gmail.com', style: TextStyle(fontSize: 18, color: Colors.grey),),
+                  )
+                ],
+              ),
+
+
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 18.0, bottom: 25),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Icon(Icons.payment),
+                        SizedBox(width: 30,),
+                        Text('Payment', style: TextStyle(fontSize: 18),)
+                      ],
+                    ),
+                  ),
+
+                  Padding(
+                    padding: const EdgeInsets.only(left: 18.0, bottom: 25),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Icon(Icons.card_travel),
+                        SizedBox(width: 30,),
+                        Text('Promos', style: TextStyle(fontSize: 18),)
+                      ],
+                    ),
+                  ),
+
+                  Padding(
+                    padding: const EdgeInsets.only(left: 18.0, bottom: 25),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Icon(Icons.notifications),
+                        SizedBox(width: 30,),
+                        Text('Notifications', style: TextStyle(fontSize: 18),)
+                      ],
+                    ),
+                  ),
+
+                  Padding(
+                    padding: const EdgeInsets.only(left: 18.0, bottom: 25),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Icon(Icons.info_outline_rounded),
+                        SizedBox(width: 30,),
+                        Text('About Us', style: TextStyle(fontSize: 18),)
+                      ],
+                    ),
+                  ),
+
+                  Padding(
+                    padding: const EdgeInsets.only(left: 18.0, bottom: 25),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Icon(Icons.star_rate_outlined),
+                        SizedBox(width: 30,),
+                        Text('Rate Us', style: TextStyle(fontSize: 18),)
+                      ],
+                    ),
+                  )
+                ],
+              ),
+
+              Padding(
+                padding: const EdgeInsets.only(left: 18.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(color: Colors.black),
+
+                  ),
+                  clipBehavior: Clip.hardEdge,
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 8.0, bottom: 8.0, left: 18, right: 18),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Icon(Icons.logout),
+                        SizedBox(width: 10,),
+                        Text('Logout', style: TextStyle(fontSize: 14),)
+                      ],
+                    ),
+                  ),
+                ),
+              )
+            ],
+          ),
 
           _AnimatedColorScreen(color: Color.fromRGBO(241, 241, 241, 0.4), controller: _controller, scaleAnimation: _scaleAnimation, rotateAnimation: _rotate60Animation, slideAnimation: _slide0Animation),
 
