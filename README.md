@@ -1,6 +1,9 @@
-# ecommerce_custom
+# custom_drawer
 
-A new Flutter project.
+Custom Flutter Drawer Menu
+
+## GIF:
+<img src="./drawer.gif" alt="GIF" height="700">
 
 ## Getting Started
 
